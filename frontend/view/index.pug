@@ -23,18 +23,13 @@ html(lang="en")
                         span.wrap 
                 br
                 p I am proficient in 
-                    a(href="" data-period="1500" data-type='[ "Python", "Django", "NodeJs", "Figma" ]').typewrite
+                    a(href="" data-period="1500" data-type='[ "Python", "Django", "NodeJs", "Figma", "HTML", "CSS" ]').typewrite
                         span.wrap 
                 br
                 a(href="#footer") Contact me 
             
             div.hero-image
-                div.cube#js
-                div.cube#python 
-                div.cube#django
-                div.cube#nodejs 
-                div.cube#html 
-                div.cube#css 
+                img(src="image.png", alt="myimage")
 
         section.sub-section 
             each item in items ? items : ['There is no current project']
