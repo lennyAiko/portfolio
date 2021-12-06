@@ -7,11 +7,11 @@ const apicache = require("apicache");
 // Init cache
 let cache = apicache.middleware;
 
-router.get("/", cache("5 minutes"), async (req, res, next) => {
+router.get("/", cache("2 minutes"), async (req, res, next) => {
   const ApiRes = await needle("get", `${process.env.APILINK}`);
   const data = ApiRes.body;
 
-  console.log(data);
+  return res.render("index", { items: data });
 });
 
 module.exports = router;

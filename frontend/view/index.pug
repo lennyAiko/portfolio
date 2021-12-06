@@ -1,0 +1,57 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        title Lennox Charles
+    body 
+        header 
+            div.switch
+                div.flicker
+                div.moon
+        
+        section.main  
+            div.main-text
+                h1 Hi, I'm Lennox Charles 
+                br
+                p Welcome to my online portfolio 
+                br
+                p I am a 
+                    a(href="" data-period="1500" data-type='[ "Web developer", "Product Manager", "Freelancer", "UI/UX Designer" ]').typewrite
+                        span.wrap 
+                br
+                p I am proficient in 
+                    a(href="" data-period="1500" data-type='[ "Python", "Django", "NodeJs", "Figma" ]').typewrite
+                        span.wrap 
+                br
+                a(href="#footer") Contact me 
+            
+            div.hero-image
+                div.cube#js
+                div.cube#python 
+                div.cube#django
+                div.cube#nodejs 
+                div.cube#html 
+                div.cube#css 
+
+        section.sub-section 
+            each item in items ? items : ['There is no current project']
+                div.square#projects
+                    h2=item.name
+                    br
+                    p=item.framework
+                    br
+                    p=item.desc
+                    <br />
+                    a(href=`${item.project_url}`, target="_blank", rel="noopener noreferrer") Check it out
+        
+        footer#footer 
+                p I am a Computer Science student and the Secretary General of NACOS kwara state university chapter. 
+                p Email: lennyaiko17@gmail.com
+                p Mobile: +2349124802297
+                p LinkedIn: &nbsp;
+                    a(href="https://www.linkedin.com/in/lennox-charles-65605b1a6/") Lennox Charles
+                
+    script(src="script.js")

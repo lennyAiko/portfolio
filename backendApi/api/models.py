@@ -7,6 +7,7 @@ class Projects(models.Model):
      name = models.CharField(max_length=150)
      framework = models.CharField(max_length=40)
      desc = models.CharField(max_length=250)
+     project_url = models.URLField(max_length=200)
      date_added = models.DateField(auto_now_add=True)
 
      class Meta:
